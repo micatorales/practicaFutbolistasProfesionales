@@ -1,0 +1,117 @@
+/*principal*/
+:root{
+    --blanco: #FFFF;
+    --oscuro:#212121;
+    --primario:#FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisClaro:#dfe9f3;
+    --cremita: #757dabef;
+    --azul: #101574;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /*codigo que debe estar si o si. hack boxmodel*/ 
+}
+*, *:before, *:after {
+    box-sizing: inherit; /*codigo que debe estar si o si 'para que el padding no modifique el tamaño' hack boxmodel*/
+}
+body{
+    font-family: "Krub", sans-serif;
+    font-size: 16px; /*1 rem == 10px*/            /*codigo para entender mejor y comarar rem con x de mejor manera*/
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%); /*degradado [to top](de abajo hacia arriba, primer color, al color que va)*/
+}
+h1{
+    font-size: 3.8rem;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 2.8rem; 
+}
+h3{
+    font-size: 1.8rem; 
+}
+h1,h2,h3{
+    text-align: center;
+}
+.boton{
+    background-color: var(--grisClaro);
+    color: var(--gris);
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    display: inline-block; /*para que el boton no ocupe todo el ancho*/
+    margin-top: 2rem;
+    border: none;
+}
+/*hero*/
+.hero {
+    background-image: url(../imagenes/soccer-player-action-stadium.jpg); /* imagen de fondo */
+    background-repeat: no-repeat; /* no se repite la imagen */
+    background-size: cover; /* la imagen cubre todo el contenedor */
+    height: 450px; /* alto del área hero */
+    padding: 20px; /* espacio interno */
+    position: relative; /* para posicionar .contenido-hero de forma absoluta */
+}
+
+.contenido-hero {
+    position: absolute; /* se posiciona sobre .hero */
+    background-color: rgb(0 0 0 / 70%); /* fondo negro semitransparente */
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+
+    display: flex; /* activa flexbox */
+    flex-direction: column; /* elementos en columna */
+    align-items: center; /* centra horizontalmente */
+    justify-content: center; /* centra verticalmente */
+}
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);
+}
+
+.contenedor{
+    max-width: 1200px; /*maximo ancho*/
+    margin: 0 auto; /*centrar*/ /*espacio interno*/
+}
+/*navegacion principal*/
+.nav-bg{
+    background-color: var(--azul); /*color fondo*/
+}
+.navegacion-principal{
+    display: flex; 
+    flex-direction: column;
+    
+}
+.navegacion-principal a {
+    display: block; /* hace que el enlace ocupe todo el ancho */
+    text-align: center; /* centra el texto */
+    color: var(--blanco); /* color del texto (usa variable blanca) */
+    font-size: 2rem; /* tamaño del texto */
+    font-weight: 700; /* texto en negrita */
+    text-decoration: none; /* sin subrayado */
+    padding: 1rem; /* espacio interno */
+}
+.navegacion-principal a:hover{
+    background-color: var(--cremita);
+    color: var(--oscuro);
+    
+
+}
+@media (min-width: 768px) {  /*tablet*/
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+}
+@media (min-width:480px ) {    /*celular*/
+    .navegacion-principal{
+        flex-direction: row;
+    }
+}

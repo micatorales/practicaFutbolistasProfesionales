@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PersonasFutbolistasProfesionales</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo"><span> Web </span>abm</h1>
+    </header>
+    <div class="subtitulo">
+        <h2>Registro de datos</h2>
+    </div>
+    <main>
+        <section>
+            <h3>Formulario Datos:</h3>
+            <form class="formulario sombra" >
+                <fieldset>
+                    <legend>
+                        Datos personales:
+                    </legend>
+                        <div class="contenedor-campos">
+                            <div class="personales">
+                                <div class="campo" > <!--campos personales-->
+                                    <label for="">id:</label>
+                                    <input class="input-text" type="text" placeholder="id" required/>
+                                </div>
+                                <div class="campo" >
+                                    <label for="">Nombre:</label>
+                                    <input class="input-text" type="text" placeholder="Nombre" required/>
+                                </div>
+                                <div class="campo" >
+                                    <label for="">Apellido:</label>
+                                    <input class= "input-text" type="text" placeholder="Apellido"required/>
+                                </div>
+                                <div class="campo" >
+                                    <label for="">Edad:</label>
+                                    <input class="input-text" type="text" placeholder="Edad"required/>
+                                </div>
+                                <div class="campo">
+                                    <label for="">Tipo:</label>
+                                    <select class="input-text" id="tipo" required>
+                                        <option value="" disabled selected>Elegí una opción</option>
+                                        <option value="Profesionales">Profesionales</option>
+                                        <option value="Futbolista">Futbolista</option>
+                                    </select>
+                                </div>
+                            </div><!--cierre campos personales-->
+                            <div class="Futbolista oculto" > <!--campo futbolistas-->
+                                <legend> <!--campos futbolistas-->
+                                    Datos Futbolista:
+                                </legend>
+                                <div class="campo">
+                                    <label for="">Equipo:</label>
+                                    <input class="input-text" type="text" placeholder="Equipo">
+                                </div>
+                                <div class="campo">
+                                    <label for="">Posicion</label>
+                                    <input class="input-text" type="text" placeholder="Posicion">
+                                </div>
+                                <div class="campo"> 
+                                    <label for="">CantGoles:</label>
+                                    <input class="input-text" type="text" placeholder="Cantidad Goles">
+                                </div>
+                            </div><!--cierre campos futbolistas-->
+                            <div class="Profesionales oculto">
+                                <legend >
+                                    Datos Profesionales:
+                                </legend>
+                                <div class="campo">
+                                    <label for="">Titulo:</label>
+                                    <input class="input-text" type="text" placeholder="Titulo">
+                                </div>
+                                <div class="campo">
+                                    <label for="">Facultad:</label>
+                                    <input class="input-text" type="text" placeholder="Facultad">
+                                </div>
+                                <div class="campo">
+                                    <label for="">AñoGrado:</label>
+                                    <input class="input-text" type="text" placeholder="Año Grado">
+                                </div>
+                            </div><!--cierre campos profesionales-->
+                    </div> <!--cierre contenedor campos-->
+                    <div class="alinear-derecha flex" > 
+                        <button class="boton w-sm-100" type="submit" >Enviar</button>
+                        <button class="boton w-sm-100" type="submit">Cancelar</button>
+                    </div> 
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Todos los derechos reservados. Micaela Torales Freelancer</p>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

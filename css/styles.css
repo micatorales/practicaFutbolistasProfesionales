@@ -1,0 +1,192 @@
+:root{
+    --blanco: #FFFF;
+    --oscuro:#212121;
+    --primario:#FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisClaro:#dfe9f3;
+    --cremita: #757dabef;
+}
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /*codigo que debe estar si o si. hack boxmodel*/ 
+}
+*, *:before, *:after {
+    box-sizing: inherit; /*codigo que debe estar si o si 'para que el padding no modifique el tamaño' hack boxmodel*/
+}
+body{
+    font-family: "Krub", sans-serif;
+    font-size: 16px; /*1 rem == 10px*/            /*codigo para entender mejor y comarar rem con x de mejor manera*/
+    background-image: linear-gradient(to top, var(--grisClaro) 70%, var(--blanco) 80%); /*degradado [to top](de abajo hacia arriba, primer color, al color que va)*/
+}
+h1{
+    font-size: 3.8rem;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 2.8rem; 
+}
+h3{
+    font-size: 1.8rem; 
+}
+h1,h2,h3{
+    text-align: center;
+}
+.sombra{  /*agrego la sombra*/
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1); /*webkit-prefijo no necesario(para soporte de navegadores)*/
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    padding: 2rem;
+    background-color: var(--blanco);
+    margin: 2rem auto;
+    border-radius: .1rem; 
+}
+.boton{
+    background-color: var(--grisClaro);
+    color: var(--gris);
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    border: none;
+    width: 90%;
+    margin:1rem 1rem ;
+}
+.boton:hover{
+    color: var(--blanco);
+    cursor: pointer;
+}
+/*titulos*/
+.titulo span{
+    font-size: 2rem;
+    text-transform: lowercase;
+}
+.subtitulo{
+    display: flex;
+    flex-direction: column;
+    
+}
+.subtitulo h2{
+    margin-top: 0;
+    background-color: var(--gris);
+    color:var(--blanco);
+    padding: 1rem;
+}
+/*utilidades*/
+.w-sm-100{
+    width: 100%;
+}
+@media (min-width: 468px) {
+    .w-sm-100{
+        width: auto;
+    }
+}
+.flex{
+    display: flex;
+}
+.alinear-derecha{
+    justify-content: flex-end; 
+}
+/*form*/
+.formulario{
+    background-color: var(--cremita);
+    border-radius:1rem;
+    width: min(70rem,100%);  /*toma el menor pixel dependiendo el tamaño del dispositivo donde se vea*/
+    margin-top: 0;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+
+.formulario legend{
+    color: var(--blanco);
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+}
+
+.formulario fieldset{
+    border: none;
+}
+@media (min-width: 768px) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1rem; /*separacion columnas*/
+    }
+    .campo{
+        display: flex;
+        flex-direction: column;;
+        margin-bottom: 1rem;
+    }
+    .personales {
+        grid-column: 1; /* columna izquierda */
+
+    }
+
+    .Futbolista,
+    .Profesionales{
+        grid-column: 2; /*columna derecha */
+    }
+}
+.Futbolista, .Profesionales {
+    display: flex; /*los .campo se organizan en columna*/
+    flex-direction: column; /*.campo uno debaj o de  otro*/
+    gap: 1rem;
+}
+
+@media (min-width: 468px) {
+    .campo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .boton{
+        align-items: center;
+    }
+}
+.fila {
+    flex-direction: row; /*para que el boton e alinee a la ixquierda ya que campo tiene flex column*/
+    justify-content: flex-start; 
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    padding-left: 0.2rem;
+}
+
+.input-text {
+    width: 90%;
+    border: none;
+    padding: .5rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+.input-text:focus {
+    outline: none;
+    border: 2px solid var(--primario);
+    box-shadow: 0 0 5px var(--primario);
+}
+
+.oculto {
+    display: none;
+}
+
+/*footer*/
+.footer{
+    text-align: center;
+}

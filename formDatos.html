@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" href="css/styles.css" as="style">
+
+    <link rel="stylesheet" href="css/stylesFormDatos.css">
+    <link rel="preload" href="css/stylesFormDatos.css" as="style">
+
+    <title>Formulario de Datos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Consulta de datos</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Formulario de Datos</h2>
+            <form class="formulario sombra" action="index.html" >
+                <fieldset>
+                    <div class="contenedor-campos2">
+                        <div class="campo" > <!--campos personales-->
+                            <label for="">Filtrar por:</label>
+                            <select class="input-text" name="Opciones" id="opc" required>
+                                <option value="" disabled selected>Elegí una opción</option>
+                                <option value="Todos">Todos</option>
+                                <option value="Profesionales">Profesionales</option>
+                                <option value="Futbolista">Futbolistas</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <div class="calculo">
+                                <label for="">Calcular edad promedio:</label>
+                                <input type="text" id="edadPromedio" name="edadPromedio" class="input-text">
+                                <button type="button" class="boton2" onclick="calcularPromedio()">Calcular</button>
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <div class="cont-casillas">
+                                <div class="casilla">
+                                    <label for="">ID</label>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="casilla">
+                                    <label for="">Nombre</label>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="casilla">
+                                    <label for="">Apellido</label>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="casilla">
+                                    <label for="">Edad</label>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="casilla">
+                                    <label for="">Equipo</label>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="casilla">
+                                    <label for="">Posicion</label>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="casilla">
+                                    <label for="">CantGoles</label>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="casilla">
+                                    <label for="">Titulo</label>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="casilla">
+                                    <label for="">Facultad</label>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="casilla">
+                                    <label for="">AñoGrado</label>
+                                    <input type="checkbox">
+                                </div>
+                            </div><!--cierre cont-casillas-->
+                        </div><!--cierre campo-->
+                        <div class="campo">
+                            
+                            <table border="1" class="tabla">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Edad</th>
+                                        <th>Equipo</th>
+                                        <th>Posicion</th>
+                                        <th>CantGoles</th>
+                                        <th>Titulo</th>
+                                        <th>Facultad</th>
+                                        <th>AñoGrado</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tablaDatos">
+                                    <!-- Aca se van a agregar las filas de datos -->
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <div class="alinear-izquierda flex">
+                            <button type="submit" class="boton2 w-sm-100" href="index.html">Agregar</button>
+                        </div>
+                    </div><!--cierre contenedor campos-->
+                </fieldset>
+                
+        </section>
+    </main>
+    <script type ="module" src="./js/main.js"></script>
+</body>
+</html>
