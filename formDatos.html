@@ -25,84 +25,84 @@
     <main>
         <section>
             <h2>Formulario de Datos</h2>
-            <form class="formulario sombra" action="index.html" >
+            <form class="formulario sombra" action="index.html" id="FormDatos" >
                 <fieldset>
                     <div class="contenedor-campos2">
                         <div class="campo" > <!--campos personales-->
                             <label for="">Filtrar por:</label>
-                            <select class="input-text" name="Opciones" id="opc" required>
+                            <select class="input-text" name="Opciones" id="Filtro" required>
                                 <option value="" disabled selected>Elegí una opción</option>
-                                <option value="Todos">Todos</option>
-                                <option value="Profesionales">Profesionales</option>
-                                <option value="Futbolista">Futbolistas</option>
+                                <option value="1">Todos</option>
+                                <option value="2">Profesionales</option>
+                                <option value="3">Futbolistas</option>
                             </select>
                         </div>
                         <div class="campo">
                             <div class="calculo">
                                 <label for="">Calcular edad promedio:</label>
                                 <input type="text" id="edadPromedio" name="edadPromedio" class="input-text">
-                                <button type="button" class="boton2" onclick="calcularPromedio()">Calcular</button>
+                                <button type="button" class="boton2" onclick="calcularPromedio()" id="btn_Calcular">Calcular</button>
                             </div>
                         </div>
                         <div class="campo">
                             <div class="cont-casillas">
                                 <div class="casilla">
                                     <label for="">ID</label>
-                                    <input type="checkbox">
+                                    <input id="ChkId"type="checkbox"checked>
                                 </div>
                                 <div class="casilla">
                                     <label for="">Nombre</label>
-                                    <input type="checkbox">
+                                    <input id= "ChkNombre"type="checkbox"checked>
                                 </div>
                                 <div class="casilla">
                                     <label for="">Apellido</label>
-                                    <input type="checkbox">
+                                    <input id="ChkApellido"type="checkbox"checked>
                                 </div>
                                 <div class="casilla">
                                     <label for="">Edad</label>
-                                    <input type="checkbox">
+                                    <input id="ChkEdad"type="checkbox"checked>
                                 </div>
                                 <div class="casilla">
                                     <label for="">Equipo</label>
-                                    <input type="checkbox">
+                                    <input id="ChkEquipo" type="checkbox"checked>
                                 </div>
                                 <div class="casilla">
                                     <label for="">Posicion</label>
-                                    <input type="checkbox">
+                                    <input id="ChkPosicion"type="checkbox"checked>
                                 </div>
                                 <div class="casilla">
                                     <label for="">CantGoles</label>
-                                    <input type="checkbox">
+                                    <input id="ChkCantGoles"type="checkbox"checked>
                                 </div>
                                 <div class="casilla">
                                     <label for="">Titulo</label>
-                                    <input type="checkbox">
+                                    <input id="ChkTitulo"type="checkbox"checked>
                                 </div>
                                 <div class="casilla">
                                     <label for="">Facultad</label>
-                                    <input type="checkbox">
+                                    <input id="ChkFacultad"type="checkbox"checked>
                                 </div>
                                 <div class="casilla">
                                     <label for="">AñoGrado</label>
-                                    <input type="checkbox">
+                                    <input id="ChkAnioGrado"type="checkbox"checked>
                                 </div>
                             </div><!--cierre cont-casillas-->
                         </div><!--cierre campo-->
                         <div class="campo">
                             
-                            <table border="1" class="tabla">
+                            <table border="1"class="tabla" id="tabla">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Nombre</th>
-                                        <th>Apellido</th>
-                                        <th>Edad</th>
-                                        <th>Equipo</th>
-                                        <th>Posicion</th>
-                                        <th>CantGoles</th>
-                                        <th>Titulo</th>
-                                        <th>Facultad</th>
-                                        <th>AñoGrado</th>
+                                        <th id="Th_Id" culumna="id">ID</th>
+                                        <th id="Th_nombre" culumna="Nombre">Nombre</th>
+                                        <th id="Th_apellido" culumna="Apellido">Apellido</th>
+                                        <th id="Th_edad" culumna="Edad">Edad</th>
+                                        <th id="Th_equipo" culumna="Equipo">Equipo</th>
+                                        <th id="Th_posicion" culumna="Posicion">Posicion</th>
+                                        <th id="Th_cantGoles" culumna="CantGoles">CantGoles</th>
+                                        <th id="Th_titulo" culumna="Titulo">Titulo</th>
+                                        <th id="Th_facultad" culumna="Facultad">Facultad</th>
+                                        <th id="Th_anioGrado" culumna="AnioGrado">AñoGrado</th>
                                     </tr>
                                 </thead>
                                 <tbody id="tablaDatos">
@@ -112,7 +112,7 @@
                             </table>
                         </div>
                         <div class="alinear-izquierda flex">
-                            <button type="submit" class="boton2 w-sm-100" href="index.html">Agregar</button>
+                            <button type="submit" class="boton2 w-sm-100" href="index.html" id="btn_Agregar">Agregar</button>
                         </div>
                     </div><!--cierre contenedor campos-->
                 </fieldset>
